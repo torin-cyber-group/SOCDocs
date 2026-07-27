@@ -1,17 +1,12 @@
 # SOCDocs
 
-SOCDocs is an open collection of practical security operations documentation,
-including incident response playbooks, operational procedures, templates, and
-related reference material.
+SOCDocs is an open collection of practical security operations documentation, including incident response playbooks, operational procedures, templates, and related reference material.
 
-The documents in this repository are generated and maintained with
-[Skriv](https://github.com/torin-cyber-group/skriv), a structured
-document-generation workflow developed by Torin Cyber Group.
+The documents in this repository are generated and maintained with Skriv, a structured document-generation workflow developed by Torin Cyber Group.
 
 ## Purpose
 
-SOCDocs provides reusable security documentation that organisations can review,
-adapt, and incorporate into their own security operations programs.
+SOCDocs provides reusable security documentation that organisations can review, adapt, and incorporate into their own security operations programs.
 
 The repository may include:
 
@@ -23,8 +18,7 @@ The repository may include:
 - recovery procedures; and
 - security governance templates.
 
-These documents provide a practical starting point. They are not designed to be
-adopted without review and customisation.
+These documents provide a practical starting point. They are not designed to be adopted without review and customisation.
 
 ## Repository structure
 
@@ -84,8 +78,7 @@ Before using a document operationally, review and adapt it for:
 - communications processes; and
 - available personnel and external providers.
 
-Names, roles, systems, timeframes, contact details, and decision authorities should
-be verified before a document is approved for use.
+Names, roles, systems, timeframes, contact details, and decision authorities should be verified before a document is approved for use.
 
 ## Document status
 
@@ -99,14 +92,12 @@ Each published document includes metadata describing:
 - source workflow; and
 - licence.
 
-Documents generated with Skriv may have one of the following deterministic
-validation results:
+Documents generated with Skriv may have one of the following deterministic validation results:
 
 - `Pass`
 - `Pass with warnings`
 
-A validation result confirms that defined structural, traceability, consistency,
-and publication checks were completed.
+A validation result confirms that defined structural, traceability, consistency, and publication checks were completed.
 
 It does not prove that a document is:
 
@@ -116,13 +107,11 @@ It does not prove that a document is:
 - technically correct for every environment; or
 - a replacement for professional review or testing.
 
-Documents that fail the publication validation gate are not intended to be included
-in this repository.
+Documents that fail the publication validation gate are not intended to be included in this repository.
 
 ## Generated with Skriv
 
-The documents in SOCDocs are generated using
-[Skriv](https://github.com/torin-cyber-group/skriv).
+The documents in SOCDocs are generated using Skriv.
 
 Skriv uses an ordered document-generation workflow that can include:
 
@@ -135,11 +124,9 @@ Skriv uses an ordered document-generation workflow that can include:
 - deterministic final validation; and
 - deterministic publication packaging.
 
-The publication process creates a local reviewable bundle. It does not
-automatically publish files to this repository.
+The publication process creates a local reviewable bundle. It does not automatically publish files to this repository.
 
-All bundles should be reviewed for confidential, personal, customer-specific, or
-organisation-specific information before publication.
+All bundles should be reviewed for confidential, personal, customer-specific, or organisation-specific information before publication.
 
 ## Contributions
 
@@ -175,8 +162,7 @@ Do not submit:
 - unverified claims presented as fact; or
 - content that you do not have permission to redistribute.
 
-Contributors should ensure that their submissions can be distributed under the
-repository licence.
+Contributors should ensure that their submissions can be distributed under the repository licence.
 
 ## Attribution
 
@@ -197,37 +183,25 @@ Where practical:
 
 ## Licence
 
-Unless otherwise stated within a document bundle, the documentation in this
-repository is licensed under the
-[Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by/4.0/).
+Unless otherwise stated within a document bundle, the documentation in this repository is licensed under the [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by/4.0/).
 
 SPDX identifier: `CC-BY-4.0`
 
-You may share and adapt the material for any purpose, including commercial
-purposes, provided that appropriate attribution is given and changes are indicated.
+You may share and adapt the material for any purpose, including commercial purposes, provided that appropriate attribution is given and changes are indicated.
 See [LICENSE](LICENSE) for the full legal text.
 
 Copyright © 2026 Torin Cyber Group Pty Ltd.
 
 ## Disclaimer
 
-The material in SOCDocs is provided for general informational and operational
-reference purposes.
+The material in SOCDocs is provided for general informational and operational reference purposes.
 
-It is not legal advice, regulatory advice, or a guarantee of security. Security
-documentation must be adapted to the organisation that will use it and should be
-reviewed by appropriately qualified personnel.
+It is not legal advice, regulatory advice, or a guarantee of security. Security documentation must be adapted to the organisation that will use it and should be reviewed by appropriately qualified personnel.
 
-Torin Cyber Group Pty Ltd makes no representation that a document is complete,
-current, suitable for a particular purpose, or sufficient to meet any legal,
-regulatory, contractual, insurance, or compliance obligation.
+Torin Cyber Group Pty Ltd makes no representation that a document is complete, current, suitable for a particular purpose, or sufficient to meet any legal, regulatory, contractual, insurance, or compliance obligation.
 
-Operational procedures should be tested through exercises and reviewed after
-relevant incidents, organisational changes, technology changes, and changes to
-applicable obligations.
+Operational procedures should be tested through exercises and reviewed after relevant incidents, organisational changes, technology changes, and changes to applicable obligations.
 
 ## Maintainer
 
 SOCDocs is maintained by Torin Cyber Group Pty Ltd.
-
-Generated documentation tooling: [Skriv](https://github.com/torin-cyber-group/skriv)
