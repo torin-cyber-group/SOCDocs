@@ -48,11 +48,25 @@ A typical bundle contains:
 | `README.md` | Overview, intended use, limitations, and document details |
 | `request.md` | Source requirements used to generate the document, where approved for publication |
 | `final.md` | Published Markdown document |
-| `final.pdf` | Printable version of the published document |
+| `final.pdf` | Printable version generated automatically from `final.md` |
 | `metadata.yaml` | Version, generation, validation, workflow, and licence metadata |
 
 Some bundles may omit `request.md` where the source request contains information
 that is not appropriate for public release.
+
+## Automatic PDF generation
+
+Skriv publication bundles contain the reviewed Markdown and metadata but do not
+contain a locally rendered PDF. After a bundle containing `final.md` is pushed to
+`main`, the `Build bundle PDFs` GitHub Actions workflow:
+
+1. discovers every bundle `final.md`;
+2. runs the MkDocs command-line build with the maintained `mkdocs-to-pdf` plugin;
+3. writes `final.pdf` beside the source Markdown; and
+4. commits changed PDFs back to the repository as `github-actions[bot]`.
+
+The workflow is also available through `workflow_dispatch` for a manual rebuild.
+Its PDF-only commit does not retrigger the workflow.
 
 ## Using the documents
 

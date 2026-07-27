@@ -1,0 +1,22 @@
+schema_version: 1
+title: BEC Response Playbook
+slug: business-email-compromise
+document_type: Incident Response Playbook
+document_version: '1.0'
+generated_date: '2026-07-27'
+generated_with:
+  name: Skriv
+  repository: https://github.com/torin-cyber-group/skriv
+workflow:
+  id: incident-playbook
+validation:
+  result: Pass
+  recommendation: Accept final document
+publication:
+  repository: SOCDocs
+  request_included: true
+licence:
+  identifier: CC-BY-4.0
+  name: Creative Commons Attribution 4.0 International
+  url: https://creativecommons.org/licenses/by/4.0/
+copyright_holder: Torin Cyber Group Pty Ltd
