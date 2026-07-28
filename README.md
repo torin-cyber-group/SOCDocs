@@ -195,14 +195,22 @@ Where practical:
 - indicate that changes were made; and
 - retain the licence notice.
 
-## Licence
+## Licensing and Commercial Use
 
-Unless otherwise stated within a document bundle, the documentation in this repository is licensed under the [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by/4.0/).
+The SOCDocs repository is free to use within your own organisation. You may use, modify and adapt the documentation for your internal Security Operations Centre, cybersecurity program, or business operations at no cost.
 
-SPDX identifier: `CC-BY-4.0`
+If you are a consulting firm, managed service provider (MSP), managed security service provider (MSSP), contractor, or any other organisation using SOCDocs to create, customise or deliver documentation for clients as part of a commercial service, you must obtain a commercial partnership or licensing agreement before doing so.
 
-You may share and adapt the material for any purpose, including commercial purposes, provided that appropriate attribution is given and changes are indicated.
-See [LICENSE](LICENSE) for the full legal text.
+Examples requiring a commercial agreement include:
+
+- Creating client documentation using SOCDocs as a starting point.
+- Bundling SOCDocs into consulting engagements.
+- Including SOCDocs within paid security assessments or compliance projects.
+- Offering customised versions of the documentation as part of a commercial service.
+
+If you're interested in using SOCDocs commercially, please contact me to discuss a partnership or licensing arrangement.
+
+Using SOCDocs internally within your own organisation does not require a commercial agreement.
 
 Copyright © 2026 Torin Cyber Group Pty Ltd.
 
