@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import shutil
@@ -78,6 +79,18 @@ def render_mermaid_diagrams(docs_dir: Path) -> None:
         return
 
     rendered = docs_dir / "final.rendered.md"
+    puppeteer_config = docs_dir.parent / "puppeteer-config.json"
+    puppeteer_config.write_text(
+        json.dumps(
+            {
+                "args": [
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
     subprocess.run(
         (
             "mmdc",
@@ -91,6 +104,8 @@ def render_mermaid_diagrams(docs_dir: Path) -> None:
             "png",
             "--scale",
             "2",
+            "--puppeteerConfigFile",
+            str(puppeteer_config),
             "--quiet",
         ),
         cwd=docs_dir,
