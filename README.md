@@ -10,9 +10,9 @@
 
 </p>
 
-SOCDocs is an open collection of practical Security Operations Centre (SOC) documentation, including incident response playbooks, operational procedures, templates and supporting reference material.
+SOCDocs is a collection of Security Operations Centre (SOC) documentation, including incident response playbooks, operational procedures, templates and supporting reference material.
 
-The documents in this repository are generated and maintained with **Skriv**, a structured document-generation workflow developed by **Torin Cyber Group**.
+The documents in this repository are generated and maintained with **Skriv**, a structured document-generation workflow (powered by AI of course) developed by **Torin Cyber Group**.
 
 ---
 
@@ -34,9 +34,9 @@ The documents in this repository are generated and maintained with **Skriv**, a 
 
 # Purpose
 
-SOCDocs provides reusable security documentation that organisations can review, adapt and incorporate into their own security operations programmes.
+SOCDocs provides reusable security documentation that organisations can review, adapt and incorporate into their own security operations programs.
 
-The repository includes practical documentation such as:
+The repository will include documentation such as:
 
 - Incident response playbooks
 - Security operations procedures
@@ -141,7 +141,7 @@ Each published bundle contains metadata describing:
 - Publication date
 - Validation result
 - Source workflow
-- Licence
+- License
 
 Current validation outcomes are:
 
