@@ -1,28 +1,58 @@
 # SOCDocs
 
-SOCDocs is an open collection of practical security operations documentation, including incident response playbooks, operational procedures, templates, and related reference material.
+<p align="center">
 
-The documents in this repository are generated and maintained with Skriv, a structured document-generation workflow developed by Torin Cyber Group.
+![Documentation](https://img.shields.io/badge/Documentation-Security%20Operations-blue)
+![Markdown](https://img.shields.io/badge/Format-Markdown-informational)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/torin-cyber-group/SOCDocs/build-pdfs.yml?branch=main&label=PDF%20Build)
+![Licence](https://img.shields.io/badge/Licence-Community-orange)
+![Issues Welcome](https://img.shields.io/badge/Issues-Welcome-brightgreen)
 
-## Purpose
+</p>
 
-SOCDocs provides reusable security documentation that organisations can review, adapt, and incorporate into their own security operations programs.
+SOCDocs is an open collection of practical Security Operations Centre (SOC) documentation, including incident response playbooks, operational procedures, templates and supporting reference material.
 
-The repository may include:
+The documents in this repository are generated and maintained with **Skriv**, a structured document-generation workflow developed by **Torin Cyber Group**.
 
-- incident response playbooks;
-- security operations procedures;
-- tabletop exercise material;
-- escalation guides;
-- investigation checklists;
-- recovery procedures; and
-- security governance templates.
+---
 
-These documents provide a practical starting point. They are not designed to be adopted without review and customisation.
+# Table of Contents
 
-## Repository structure
+- [Purpose](#purpose)
+- [Repository Structure](#repository-structure)
+- [Automatic PDF Generation](#automatic-pdf-generation)
+- [Using the Documents](#using-the-documents)
+- [Document Status](#document-status)
+- [Generated with Skriv](#generated-with-skriv)
+- [Contributions and Feedback](#contributions-and-feedback)
+- [Attribution](#attribution)
+- [Licensing and Commercial Use](#licensing-and-commercial-use)
+- [Disclaimer](#disclaimer)
+- [Maintainer](#maintainer)
 
-Each document is stored as a self-contained bundle.
+---
+
+# Purpose
+
+SOCDocs provides reusable security documentation that organisations can review, adapt and incorporate into their own security operations programmes.
+
+The repository includes practical documentation such as:
+
+- Incident response playbooks
+- Security operations procedures
+- Tabletop exercise material
+- Escalation guides
+- Investigation checklists
+- Recovery procedures
+- Security governance templates
+
+These documents are intended as a practical starting point and should always be reviewed, customised and approved before operational use.
+
+---
+
+# Repository Structure
+
+Each document is stored as a self-contained publication bundle.
 
 ```text
 SOCDocs/
@@ -41,190 +71,228 @@ SOCDocs/
 └── other/
 ```
 
-A typical bundle contains:
+Typical bundle contents:
 
 | File | Purpose |
-|---|---|
-| `README.md` | Overview, intended use, limitations, and document details |
-| `request.md` | Source requirements used to generate the document, where approved for publication |
+|------|----------|
+| `README.md` | Overview, intended use, limitations and document details |
+| `request.md` | Original generation request (where suitable for publication) |
 | `final.md` | Published Markdown document |
-| `final.pdf` | Printable version generated automatically from `final.md` |
-| `metadata.yaml` | Version, generation, validation, workflow, and licence metadata |
+| `final.pdf` | Printable PDF generated automatically |
+| `metadata.yaml` | Version, validation, workflow and publication metadata |
 
-Some bundles may omit `request.md` where the source request contains information
-that is not appropriate for public release.
+Some bundles intentionally omit `request.md` where publication could disclose sensitive or unnecessary information.
 
-## Automatic PDF generation
+---
 
-Skriv publication bundles contain the reviewed Markdown and metadata but do not
-contain a locally rendered PDF. After a bundle containing `final.md` is pushed to
-`main`, the `Build bundle PDFs` GitHub Actions workflow:
+# Automatic PDF Generation
 
-1. discovers every bundle `final.md`;
-2. pre-renders Mermaid code blocks as print-scaled images with the official Mermaid CLI;
-3. runs the MkDocs command-line build with the maintained `mkdocs-to-pdf` plugin;
-4. writes `final.pdf` beside the source Markdown; and
-5. commits changed PDFs back to the repository as `github-actions[bot]`.
+Publication bundles contain reviewed Markdown and metadata.
 
-The workflow is also available through `workflow_dispatch` for a manual rebuild.
-Its PDF-only commit does not retrigger the workflow.
+PDFs are generated automatically after changes are merged into `main`.
 
-## Using the documents
+The **Build Bundle PDFs** GitHub Actions workflow:
 
-You may:
+1. Discovers every `final.md`
+2. Builds PDFs using MkDocs and `mkdocs-to-pdf`
+3. Writes `final.pdf` beside the Markdown source
+4. Commits updated PDFs using `github-actions[bot]`
 
-- read and use the documents as reference material;
-- adapt them to your organisation;
-- redistribute them;
-- translate them;
-- incorporate portions into other documentation; and
-- use them for internal or commercial purposes.
+The workflow can also be run manually using **workflow_dispatch**.
 
-Before using a document operationally, review and adapt it for:
+---
 
-- your organisational structure;
-- technology environment;
-- security tooling;
-- escalation paths;
-- legal and regulatory obligations;
-- contractual requirements;
-- risk appetite;
-- incident classification model;
-- communications processes; and
-- available personnel and external providers.
+# Using the Documents
 
-Names, roles, systems, timeframes, contact details, and decision authorities should be verified before a document is approved for use.
+SOCDocs is intended to help organisations accelerate development of their own documentation.
 
-## Document status
+You may use the documents to:
 
-Each published document includes metadata describing:
+- Learn from existing examples
+- Adapt documentation for your organisation
+- Translate content
+- Incorporate sections into internal documentation
+- Build your own operational documentation
 
-- its title;
-- document type;
-- version;
-- generation date;
-- validation result;
-- source workflow; and
-- licence.
+Before operational use, every document should be reviewed and customised for your:
 
-Documents generated with Skriv may have one of the following deterministic validation results:
+- organisational structure
+- technology environment
+- security tooling
+- escalation paths
+- legal and regulatory obligations
+- contractual requirements
+- risk appetite
+- incident classification model
+- communications processes
+- personnel and external providers
+
+Names, contact details, authorities, systems and procedures should always be verified before approval.
+
+---
+
+# Document Status
+
+Each published bundle contains metadata describing:
+
+- Title
+- Document type
+- Version
+- Publication date
+- Validation result
+- Source workflow
+- Licence
+
+Current validation outcomes are:
 
 - `Pass`
 - `Pass with warnings`
 
-A validation result confirms that defined structural, traceability, consistency, and publication checks were completed.
+Validation confirms that publication, consistency and structural checks completed successfully.
 
-It does not prove that a document is:
+It does **not** certify that a document is:
 
-- factually complete;
-- legally compliant;
-- suitable for a particular organisation;
-- technically correct for every environment; or
-- a replacement for professional review or testing.
+- technically complete
+- legally compliant
+- suitable for every environment
+- a substitute for expert review or testing
 
-Documents that fail the publication validation gate are not intended to be included in this repository.
+---
 
-## Generated with Skriv
+# Generated with Skriv
 
-The documents in SOCDocs are generated using Skriv.
+SOCDocs is generated using **Skriv**, a structured documentation workflow developed by Torin Cyber Group.
 
-Skriv uses an ordered document-generation workflow that can include:
+The workflow may include:
 
-- research;
-- evidence normalisation;
-- drafting;
-- technical review;
-- revision;
-- editing;
-- deterministic final validation; and
-- deterministic publication packaging.
+- Research
+- Evidence normalisation
+- Drafting
+- Technical review
+- Editing
+- Deterministic validation
+- Publication packaging
 
-The publication process creates a local reviewable bundle. It does not automatically publish files to this repository.
+Publication bundles are reviewed before being published.
 
-All bundles should be reviewed for confidential, personal, customer-specific, or organisation-specific information before publication.
+No document should be published without first confirming that confidential, customer-specific or organisation-specific information has been removed.
 
-## Contributions
+---
 
-Contributions are welcome.
+# Contributing
+## Contributions and Feedback
 
-Useful contributions include:
+Feedback, corrections and improvement suggestions are welcome through GitHub Issues.
 
-- corrections;
-- clearer wording;
-- additional technical detail;
-- improved operational steps;
-- new document scenarios;
-- accessibility improvements;
-- references to authoritative public guidance; and
-- fixes for formatting or broken links.
+Please do not submit pull requests or maintain modified forks for contribution back to this repository. SOCDocs documents are generated and maintained through Skriv, so changes need to be made within the underlying generation workflow rather than applied only to an individual published file.
 
-When contributing changes:
+Useful issues include:
 
-1. Create a branch or fork.
-2. Make the proposed change.
-3. Explain the reason for the change.
-4. Identify any assumptions.
-5. Submit a pull request.
+* technical corrections;
+* unclear or ambiguous wording;
+* missing operational steps;
+* inaccurate assumptions;
+* formatting or accessibility problems;
+* broken links or references;
+* suggested document scenarios;
+* gaps in existing playbooks or procedures; and
+* recommendations for authoritative public guidance.
 
-Do not submit:
+When opening an issue, include:
 
-- confidential information;
-- customer information;
-- credentials or secrets;
-- internal network details;
-- personal information;
-- proprietary threat intelligence;
-- unverified claims presented as fact; or
-- content that you do not have permission to redistribute.
+1. The affected document and section.
+2. A clear description of the issue.
+3. The reason a change is needed.
+4. Suggested wording or expected behaviour, where practical.
+5. Any relevant references or supporting evidence.
 
-Contributors should ensure that their submissions can be distributed under the repository licence.
+Do not include:
 
-## Attribution
+* confidential or customer information;
+* credentials, secrets or access tokens;
+* internal network details;
+* personal information;
+* proprietary threat intelligence;
+* unpublished incident information; or
+* material you do not have permission to share.
 
-When reusing or adapting material from SOCDocs, provide reasonable attribution.
+Accepted improvements will be incorporated into Skriv where appropriate and applied to the relevant generated documents in a future repository update.
+
+
+---
+
+# Attribution
+
+When adapting SOCDocs, reasonable attribution is appreciated.
 
 Example:
 
-> Adapted from SOCDocs by Torin Cyber Group Pty Ltd, licensed under CC BY 4.0.
->
+> Adapted from SOCDocs by Torin Cyber Group Pty Ltd.
+
 > https://github.com/torin-cyber-group/SOCDocs
 
 Where practical:
 
-- link to the original document;
-- identify the document version;
-- indicate that changes were made; and
-- retain the licence notice.
+- Link to the original document
+- Identify the version used
+- State that modifications were made
+- Retain licence information
 
-## Licensing and Commercial Use
+---
 
-The SOCDocs repository is free to use within your own organisation. You may use, modify and adapt the documentation for your internal Security Operations Centre, cybersecurity program, or business operations at no cost.
+# Licensing and Commercial Use
 
-If you are a consulting firm, managed service provider (MSP), managed security service provider (MSSP), contractor, or any other organisation using SOCDocs to create, customise or deliver documentation for clients as part of a commercial service, you must obtain a commercial partnership or licensing agreement before doing so.
+SOCDocs is free to use, modify and adapt **within your own organisation**.
 
-Examples requiring a commercial agreement include:
+This includes internal use by:
 
-- Creating client documentation using SOCDocs as a starting point.
-- Bundling SOCDocs into consulting engagements.
-- Including SOCDocs within paid security assessments or compliance projects.
-- Offering customised versions of the documentation as part of a commercial service.
+- private organisations
+- government agencies
+- educational institutions
+- not-for-profit organisations
 
-If you're interested in using SOCDocs commercially, please contact me to discuss a partnership or licensing arrangement.
+No commercial licence is required for internal operational use.
 
-Using SOCDocs internally within your own organisation does not require a commercial agreement.
+### Commercial Services
+
+A commercial licence or partnership agreement is required if SOCDocs is used as part of services delivered to third parties.
+
+This includes, but is not limited to:
+
+- Consulting engagements
+- Professional advisory services
+- Managed Security Services (MSSP)
+- Managed Service Providers (MSP)
+- Documentation developed for clients
+- Security assessments
+- Compliance engagements
+- Commercial training packages
+- Reselling or redistributing SOCDocs as part of a paid offering
+
+If your organisation wishes to use SOCDocs commercially, please contact the maintainer to discuss licensing or partnership options.
 
 Copyright © 2026 Torin Cyber Group Pty Ltd.
 
-## Disclaimer
+---
 
-The material in SOCDocs is provided for general informational and operational reference purposes.
+# Disclaimer
 
-It is not legal advice, regulatory advice, or a guarantee of security. Security documentation must be adapted to the organisation that will use it and should be reviewed by appropriately qualified personnel.
+SOCDocs is provided for informational and operational reference purposes only.
 
-Torin Cyber Group Pty Ltd makes no representation that a document is complete, current, suitable for a particular purpose, or sufficient to meet any legal, regulatory, contractual, insurance, or compliance obligation.
+The documentation is **not** legal advice, regulatory advice or a guarantee of security.
 
-Operational procedures should be tested through exercises and reviewed after relevant incidents, organisational changes, technology changes, and changes to applicable obligations.
+Every organisation is responsible for reviewing, approving and testing documentation before operational use.
 
-## Maintainer
+Torin Cyber Group Pty Ltd makes no warranty that any document is complete, current or suitable for a particular environment or compliance obligation.
 
-SOCDocs is maintained by Torin Cyber Group Pty Ltd.
+Operational documentation should be reviewed following security incidents, organisational changes, technology changes and changes to applicable legal or regulatory obligations.
+
+---
+
+# Maintainer
+
+**Torin Cyber Group Pty Ltd**
+
+SOCDocs is maintained by Torin Cyber Group.
+
+For commercial licensing or partnership enquiries, please contact Torin Cyber Group through the GitHub repository or company website.
