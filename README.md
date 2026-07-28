@@ -61,9 +61,10 @@ contain a locally rendered PDF. After a bundle containing `final.md` is pushed t
 `main`, the `Build bundle PDFs` GitHub Actions workflow:
 
 1. discovers every bundle `final.md`;
-2. runs the MkDocs command-line build with the maintained `mkdocs-to-pdf` plugin;
-3. writes `final.pdf` beside the source Markdown; and
-4. commits changed PDFs back to the repository as `github-actions[bot]`.
+2. pre-renders Mermaid code blocks as print-scaled images with the official Mermaid CLI;
+3. runs the MkDocs command-line build with the maintained `mkdocs-to-pdf` plugin;
+4. writes `final.pdf` beside the source Markdown; and
+5. commits changed PDFs back to the repository as `github-actions[bot]`.
 
 The workflow is also available through `workflow_dispatch` for a manual rebuild.
 Its PDF-only commit does not retrigger the workflow.

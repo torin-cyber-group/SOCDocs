@@ -14,6 +14,7 @@ from pathlib import Path
 import yaml
 
 H1_PATTERN = re.compile(r"^# (?!#)(\S.*)$")
+MERMAID_FENCE_PATTERN = re.compile(r"^```mermaid[ \t]*$", re.MULTILINE)
 
 
 class PdfBuildError(Exception):
@@ -65,6 +66,47 @@ def copy_bundle_sources(bundle: Path, docs_dir: Path) -> None:
         shutil.copyfile(source, destination)
 
 
+def render_mermaid_diagrams(docs_dir: Path) -> None:
+    """Replace Mermaid fences with print-scaled image references."""
+
+    source = docs_dir / "final.md"
+    try:
+        markdown = source.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as exc:
+        raise PdfBuildError(f"cannot read copied Markdown {source}: {exc}") from exc
+    if MERMAID_FENCE_PATTERN.search(markdown) is None:
+        return
+
+    rendered = docs_dir / "final.rendered.md"
+    subprocess.run(
+        (
+            "mmdc",
+            "--input",
+            source.name,
+            "--output",
+            rendered.name,
+            "--backgroundColor",
+            "transparent",
+            "--outputFormat",
+            "png",
+            "--scale",
+            "2",
+            "--quiet",
+        ),
+        cwd=docs_dir,
+        check=True,
+    )
+    try:
+        rendered_markdown = rendered.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as exc:
+        raise PdfBuildError(f"cannot read Mermaid output {rendered}: {exc}") from exc
+    if MERMAID_FENCE_PATTERN.search(rendered_markdown) is not None:
+        raise PdfBuildError(f"Mermaid fences remain after rendering {source}")
+    if not list(docs_dir.glob("final.rendered-*.png")):
+        raise PdfBuildError(f"Mermaid CLI did not create PNG assets for {source}")
+    os.replace(rendered, source)
+
+
 def build_pdf(repository: Path, final_document: Path) -> None:
     """Run MkDocs for one bundle and atomically replace its generated PDF."""
 
@@ -76,6 +118,19 @@ def build_pdf(repository: Path, final_document: Path) -> None:
         site_dir = workspace / "site"
         config_path = workspace / "mkdocs.yml"
         copy_bundle_sources(bundle, docs_dir)
+        render_mermaid_diagrams(docs_dir)
+        (docs_dir / "pdf-render.css").write_text(
+            'img[src*="final.rendered-"] {\n'
+            "  display: block;\n"
+            "  height: auto;\n"
+            "  margin: 0 auto;\n"
+            "  max-height: 220mm;\n"
+            "  max-width: 100%;\n"
+            "  object-fit: contain;\n"
+            "  width: auto;\n"
+            "}\n",
+            encoding="utf-8",
+        )
         config = {
             "site_name": title,
             "docs_dir": str(docs_dir),
@@ -83,6 +138,7 @@ def build_pdf(repository: Path, final_document: Path) -> None:
             "use_directory_urls": False,
             "nav": [{"Document": "final.md"}],
             "theme": {"name": "mkdocs"},
+            "extra_css": ["pdf-render.css"],
             "plugins": [
                 {
                     "to-pdf": {
