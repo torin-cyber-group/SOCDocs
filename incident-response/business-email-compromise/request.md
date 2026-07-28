@@ -1,7 +1,10 @@
 # Document request
 
-Prepare an incident response playbook for a business email compromise incident.
+Prepare a public incident response playbook template for a business email
+compromise incident.
 
-Approval metadata has not been supplied. State that the approver and approval or review dates are not supplied or pending rather than leaving bracketed placeholders. Do not invent names or dates.
+Use the title "Business Email Compromise Response Playbook Template".
 
-Use the document title "BEC Response Playbook".
+The result must be a reusable public template. Keep the documented organisation
+fields from the target template. Do not invent names, contacts, dates, systems,
+legal duties or approval claims.

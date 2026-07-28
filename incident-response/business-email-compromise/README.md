@@ -1,12 +1,14 @@
-# BEC Response Playbook
+# Business Email Compromise Response Playbook Template
 
-BEC Response Playbook is a Incident Response Playbook generated as a general security operations reference.
+Business Email Compromise Response Playbook Template is a public Incident Response Playbook template generated as a general
+security operations starting point. It is not an approved organisation-specific procedure.
 
 ## Document information
 
 - **Document type:** Incident Response Playbook
+- **Status:** Public template — requires organisational customisation
 - **Version:** 1.0
-- **Validation:** Pass
+- **Validation:** Pass with warnings
 - **Generated with:** [Skriv](https://github.com/torin-cyber-group/skriv)
 
 ## Files

@@ -1,20 +1,26 @@
-schema_version: 1
-title: BEC Response Playbook
+schema_version: 2
+title: Business Email Compromise Response Playbook Template
 slug: business-email-compromise
 document_type: Incident Response Playbook
 document_version: '1.0'
-generated_date: '2026-07-27'
+generated_date: '2026-07-28'
 generated_with:
   name: Skriv
   repository: https://github.com/torin-cyber-group/skriv
 workflow:
   id: incident-playbook
 validation:
-  result: Pass
-  recommendation: Accept final document
+  result: Pass with warnings
+  recommendation: Accept final document with warnings
+content_validation:
+  mermaid:
+    blocks_found: 1
+    blocks_normalised: 1
+    validation: passed
 publication:
   repository: SOCDocs
   request_included: true
+  status: Public template — requires organisational customisation
 licence:
   identifier: CC-BY-4.0
   name: Creative Commons Attribution 4.0 International
