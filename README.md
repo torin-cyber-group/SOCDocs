@@ -4,7 +4,7 @@
 
 ![Documentation](https://img.shields.io/badge/Documentation-Security%20Operations-blue)
 ![Markdown](https://img.shields.io/badge/Format-Markdown-informational)
-![GitHub Actions](https://img.shields.io/github/actions/workflow/status/torin-cyber-group/SOCDocs/build-pdfs.yml?branch=main&label=PDF%20Build)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/torin-cyber-group/SOCDocs/build-bundle-pdfs.yml?branch=main&label=PDF%20Build)
 ![Licence](https://img.shields.io/badge/Licence-Community-orange)
 ![Issues Welcome](https://img.shields.io/badge/Issues-Welcome-brightgreen)
 
@@ -58,12 +58,12 @@ Each document is stored as a self-contained publication bundle.
 SOCDocs/
 ├── README.md
 ├── LICENSE
-├── incident-response/
-│   └── ai-data-leakage/
+├── incident-response-playbook/
+│   └── business-email-compromise/
 │       ├── README.md
 │       ├── request.md
 │       ├── final.md
-│       ├── incident-response-playbook-ai-data-leakage-1.0.pdf
+│       ├── incident-response-playbook-business-email-compromise-1.0.pdf
 │       └── metadata.yaml
 ├── procedures/
 ├── tabletop-exercises/

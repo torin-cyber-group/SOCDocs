@@ -22,7 +22,7 @@ publication:
   request_included: true
   status: Public template — requires organisational customisation
 licence:
-  identifier: CC-BY-4.0
-  name: Creative Commons Attribution 4.0 International
-  url: https://creativecommons.org/licenses/by/4.0/
+  identifier: SOCDOCS-COMMUNITY
+  name: SOCDocs Community Licence
+  url: ../../LICENSE
 copyright_holder: Torin Cyber Group Pty Ltd
