@@ -1,11 +1,4 @@
-# Business Email Compromise Response Playbook Template
-
-> **Status:** Public template — requires organisational customisation<br>
-> **Document version:** 1.0  
-> **Generated:** 28 July 2026<br>
-> **Generated with:** [Skriv](https://github.com/torin-cyber-group/skriv)  
-> **Validation:** Pass with warnings<br>
-> **Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+# Business Email Compromise
 
 ## Document control
 
@@ -66,7 +59,7 @@ Complete these actions as soon as BEC is suspected.
 - Gather the available transfer details and related correspondence to support financial intervention and reporting.
 - Identify whether the incident involves a compromised internal account, external impersonation only, or a compromised supplier or vendor account.
 - If an internal account appears compromised, ask the Email or Identity Administrator to suspend the account or invalidate its active sessions immediately. This stops continuing unauthorised access. Capture available evidence first if this will not delay containment; otherwise, contain first and preserve what evidence remains.
-- Report the incident through the cybercrime-reporting channel that currently applies in your jurisdiction. See Jurisdiction-specific considerations for illustrative examples, and confirm the applicable channel before relying on it.
+- Report the incident through the cybercrime-reporting channel that currently applies in your jurisdiction. Confirm the applicable channel before relying on it.
 
 ## Roles and responsibilities
 
@@ -176,7 +169,7 @@ Containment stops or limits harm while the team investigates.
 - If a payment has not been sent, hold it until the request is verified through a separately sourced contact channel.
 - If a transfer has already been sent, contact the financial institution immediately. Ask about recall, reversal, hold or freeze options, and what records or documentation it requires.
 - Where a supplier or vendor account may be compromised, verify current payment details directly with the supplier through a known channel before paying.
-- Report the incident through the cybercrime-reporting channel that currently applies in your jurisdiction. See Jurisdiction-specific considerations for illustrative examples, and confirm the applicable channel and procedure before relying on it. In the United States, report promptly. Fast reporting supports the Recovery Asset Team process, run by the Federal Bureau of Investigation (FBI), for eligible fraudulent-transfer cases. Confirm current eligibility, process and timing directly with the FBI's Internet Crime Complaint Center (IC3).
+- Report the incident through the cybercrime-reporting channel that currently applies in your jurisdiction. Confirm the applicable channel and procedure before relying on it. In the United States, report promptly. Fast reporting supports the Recovery Asset Team process, run by the Federal Bureau of Investigation (FBI), for eligible fraudulent-transfer cases. Confirm current eligibility, process and timing directly with the FBI's Internet Crime Complaint Center (IC3).
 
 ### Account or mailbox containment
 
@@ -213,7 +206,7 @@ Recovery restores trusted operation and checks that the incident does not recur.
 - Coordinate broad external communications with account containment and any active financial-institution or law-enforcement engagement, unless the incident circumstances require an immediate warning or notification.
 - Route suspected exposure of personal information to Legal or Privacy for assessment. Do not wait for the investigation to conclude.
 - Legal or Privacy must assess whether a statutory or contractual notification obligation applies. Do not assume notification is required merely because email was involved.
-- See Jurisdiction-specific considerations for examples. Treat these as illustrative, not as default obligations for your organisation.
+- Treat jurisdiction-specific examples as illustrative, not as default obligations for your organisation.
 
 ### Closure criteria
 
@@ -238,29 +231,6 @@ Review the response and assign improvements with owners and due dates.
 - Consider improvements to MFA, payment-detail verification and staff awareness where the review identifies weaknesses in these areas.
 - Assign each improvement an owner and a due date.
 - Feed confirmed improvements back into the Preparation section.
-
-## Action and decision log
-
-| Date/time | Action or decision | Owner | Outcome or reference |
-|---|---|---|---|
-|  |  |  |  |
-
-## Jurisdiction-specific considerations
-
-Use the examples below only as a starting point. Confirm every applicable jurisdiction, sector, contract and insurance obligation through qualified legal or privacy review before operational use.
-
-### Australia
-
-- An entity covered by the Privacy Act 1988 (Cth) must assess certain incidents under the Notifiable Data Breaches (NDB) scheme. This applies where the incident involves unauthorised access to, or disclosure of, personal information. The entity must consider whether serious harm is likely and whether notification is required.
-- Confirm whether your organisation is a covered entity, including any small-business coverage question and applicable exceptions, with your Legal or Privacy contact. Do not assume coverage or exemption without current legal confirmation.
-- Report incidents through ReportCyber (cyber.gov.au), the Australian Government's cybercrime-reporting channel, or your current applicable channel. Confirm eligibility and process directly before relying on it.
-- Confirm the legal thresholds that trigger a notification requirement (statutory thresholds), exceptions and current legislation with qualified legal advice before relying on this section.
-
-### United States
-
-- IC3 is a cybercrime-reporting and financial-recovery-assistance channel run by the FBI. It is not evidence of a universal statutory breach-notification requirement.
-- Prompt reporting matters to the Recovery Asset Team process for eligible fraudulent-transfer cases. Confirm current eligibility, process and timing directly with IC3 before relying on any specific reporting window.
-- Confirm applicable United States federal, state and sector-specific notification law with qualified legal advice. This template does not state a United States statutory notification obligation.
 
 ## References
 

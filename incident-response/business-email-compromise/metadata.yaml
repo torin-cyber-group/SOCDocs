@@ -1,5 +1,5 @@
 schema_version: 2
-title: Business Email Compromise Response Playbook Template
+title: Business Email Compromise
 slug: business-email-compromise
 document_type: Incident Response Playbook
 document_version: '1.0'

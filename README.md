@@ -63,7 +63,7 @@ SOCDocs/
 │       ├── README.md
 │       ├── request.md
 │       ├── final.md
-│       ├── final.pdf
+│       ├── incident-response-playbook-ai-data-leakage-1.0.pdf
 │       └── metadata.yaml
 ├── procedures/
 ├── tabletop-exercises/
@@ -78,7 +78,7 @@ Typical bundle contents:
 | `README.md` | Overview, intended use, limitations and document details |
 | `request.md` | Original generation request (where suitable for publication) |
 | `final.md` | Published Markdown document |
-| `final.pdf` | Printable PDF generated automatically |
+| `<type>-<title>-<version>.pdf` | Printable PDF generated automatically |
 | `metadata.yaml` | Version, validation, workflow and publication metadata |
 
 Some bundles intentionally omit `request.md` where publication could disclose sensitive or unnecessary information.
@@ -95,7 +95,7 @@ The **Build Bundle PDFs** GitHub Actions workflow:
 
 1. Discovers every `final.md`
 2. Builds PDFs using MkDocs and `mkdocs-to-pdf`
-3. Writes `final.pdf` beside the Markdown source
+3. Writes a `<type>-<title>-<version>.pdf` file beside the Markdown source
 4. Commits updated PDFs using `github-actions[bot]`
 
 The workflow can also be run manually using **workflow_dispatch**.

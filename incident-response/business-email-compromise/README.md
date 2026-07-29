@@ -1,6 +1,6 @@
-# Business Email Compromise Response Playbook Template
+# Business Email Compromise
 
-Business Email Compromise Response Playbook Template is a public Incident Response Playbook template generated as a general
+Business Email Compromise is a public Incident Response Playbook template generated as a general
 security operations starting point. It is not an approved organisation-specific procedure.
 
 ## Document information
@@ -14,7 +14,7 @@ security operations starting point. It is not an approved organisation-specific 
 ## Files
 
 - `final.md` — publication Markdown.
-- `final.pdf` — generated from `final.md` by SOCDocs automation after publication.
+- `incident-response-playbook-business-email-compromise-1.0.pdf` — generated from `final.md` by SOCDocs automation after publication.
 - `metadata.yaml` — deterministic publication and validation metadata.
 - `request.md` — approved source generation request.
 
